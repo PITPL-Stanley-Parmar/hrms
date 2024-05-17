@@ -13,6 +13,7 @@
   "employee_name",
   "working_hours",
   "status",
+  "half_day_session",
   "leave_type",
   "leave_application",
   "column_break0",
@@ -201,7 +202,12 @@
   {
    "fieldname": "column_break_18",
    "fieldtype": "Column Break"
-  }
+  },
+  {
+    "fieldname": "half_day_session",
+    "fieldtype": "Data",
+    "label": "Half Day Session"
+   }
  ],
  "icon": "fa fa-ok",
  "idx": 1,

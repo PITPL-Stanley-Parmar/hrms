@@ -11,6 +11,7 @@
   "standard_working_hours",
   "column_break_9",
   "retirement_age",
+  "admin_user",
   "reminders_section",
   "column_break_11",
   "send_work_anniversary_reminders",
@@ -296,6 +297,14 @@
    "fieldname": "shift_settings_section",
    "fieldtype": "Section Break",
    "label": "Shift Settings"
+  },
+  {
+   "fieldname": "admin_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admin User",
+   "options": "User",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-cog",

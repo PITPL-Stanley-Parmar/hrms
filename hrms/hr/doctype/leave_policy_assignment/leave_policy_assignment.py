@@ -8,6 +8,7 @@ import frappe
 from frappe import _, bold
 from frappe.model.document import Document
 from frappe.utils import (
+	add_to_date,
 	add_months,
 	cint,
 	comma_and,
@@ -302,9 +303,9 @@ def create_assignment_for_multiple_employees(employees, data):
 		try:
 			frappe.db.savepoint(savepoint)
 			assignment.submit()
-		except Exception:
+		except Exception as e:
 			frappe.db.rollback(save_point=savepoint)
-			assignment.log_error("Leave Policy Assignment submission failed")
+			frappe.log_error(title=f"Leave Policy Assignment submission failed for {assignment.name}")
 			failed.append(assignment.name)
 
 		docs_name.append(assignment.name)
